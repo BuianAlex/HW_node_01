@@ -6,11 +6,16 @@ function RenderDir() {
     let folders = '';
     params.forEach(file => {
       if (file.isFile) {
-        files += `<li><a href="${url}/${
+        files += `<li class="file-str"><a href="${url}/${
           file.name
-        }"class="file-str"><span> ${`${typeIcon[1] + file.name}</span> <span>${
+        }">${`${typeIcon[1] + file.name}</a><span>${
           file.about.size
-        }byte</span><span>${file.about.mtime}`}</span> </a></li>`;
+        }byte</span><span>${file.about.mtime}`}</span><a href="${url}/${
+          file.name
+        }?download">Download </a> &ensp;|&ensp; <a href="${url}/${
+          file.name
+        }?download&compress"
+         >inZip</a></li>`;
       } else {
         folders += `<li><a href="${url}/${
           file.name

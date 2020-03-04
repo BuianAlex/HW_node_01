@@ -28,7 +28,7 @@ li {
   overflow: hidden;
   padding-right: 1rem;
 }
-.file-str span:nth-child(1) {
+.file-str :nth-child(1) {
   width: 30%;
 }
 .file-str span:nth-child(2) {
